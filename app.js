@@ -25,4 +25,15 @@ function atualizarListaDeNomes() {
   }
 }
 
+function sortearAmigo(){
+  let resultado = document.getElementById("resultado");
+
+  if(amigos.length === 0){
+    alert("Por favor, digite um nome");
+  } else {
+    const nomeAleatorio = Math.floor(Math.random() * amigos.length);
+    const amigoSorteado = amigos[nomeAleatorio];
+    resultado.innerHTML = "O amigo sorteado foi: " + amigoSorteado;
+  }
+}
 
